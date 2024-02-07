@@ -1,12 +1,77 @@
-<div class="flex justify-between py-4 px-16">
-  <img src="/logo.webp" alt="" class="h-[70px] w-[110px]">
-  <nav class="flex gap-6 items-center">
-    <a href="/" class="text-sm font-medium">Home</a>
-    <a href="/biogas" class="text-sm font-medium">HomeBiogas</a>
-    <a href="/organic-store" class="text-sm font-medium">Organic Store</a>
-    <a href="/mushrooms" class="text-sm font-medium">Mushrooms</a>
-    <a href="/services" class="text-sm font-medium">Financial Services</a>
-    <a href="/saafplatform" class="text-sm font-medium">Saafplatform</a>
-    <button class="rounded-[39px] bg-[#ED7225] py-2 px-4 text-white text-sm font-medium">Contact Us</button>
+<style>
+   .mobileNavActive {
+    transform: translateX(0);
+  }
+</style>
+
+<div
+  class="flex justify-between px-16 max-[1000px]:px-6 items-center max-[700px]:mt-8"
+>
+  <img src="/logo.webp" alt="" class="h-[70px] w-[110px]" />
+  <button class="h-[20px] w-[20px] min-[901px]:hidden" id="mobileNavBtn">
+    <img src="/vertIcon.svg" alt="" />
+  </button>
+  <nav class="flex gap-6 items-center max-[900px]:hidden text-sm font-medium">
+    <a href="/">Home</a>
+    <a href="/biogas">HomeBiogas</a>
+    <a href="/organic-store">Organic Store</a>
+    <a href="/mushrooms">Mushrooms</a>
+    <a href="/services">Financial Services</a>
+    <a href="https://www.saafplatform.com/">Saafplatform</a>
+    <button
+      class="rounded-[39px] bg-[#ED7225] py-2 px-4 text-white contactUsButton"
+    >
+      Contact Us
+    </button>
   </nav>
 </div>
+<div
+  class="fixed flex flex-col text-lg gap-4 font-semibold transition-transform bg-white w-[min(350px,100%)] py-10 items-center z-10 h-full right-0 drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] translate-x-full"
+  id="mobileNav"
+>
+  <button class="w-[22px] absolute top-5 right-5" id="mobileNavCloseBtn">
+    <img src="/closeIcon.svg" alt="">
+  </button>
+  <a href="/" class="mt-10 mobileNavLink">Home</a>
+  <a href="/biogas" class="mobileNavLink">HomeBiogas</a>
+  <a href="/organic-store" class="mobileNavLink">Organic Store</a>
+  <a href="/mushrooms" class="mobileNavLink">Mushrooms</a>
+  <a href="/services" class="mobileNavLink">Financial Services</a>
+  <a href="https://www.saafplatform.com/" class="mobileNavLink">Saafplatform</a>
+  <button
+    class="rounded-[39px] bg-[#ED7225] py-2 px-4 text-white mt-auto contactUsButton mobileNavLink"
+  >
+    Contact Us
+  </button>
+</div>
+
+<script>
+  const contactUsButtonEles =
+    document.getElementsByClassName("contactUsButton");
+  const contactFormContainerEle = document.getElementById(
+    "contactFormContainer"
+  );
+  Array.from(contactUsButtonEles)?.forEach((ele) => {
+    ele.addEventListener("click", function () {
+      contactFormContainerEle?.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  const mobileNavBtnEle = document.getElementById("mobileNavBtn");
+  const mobileNavCloseBtnEle = document.getElementById("mobileNavCloseBtn");
+  const mobileNavEle = document.getElementById("mobileNav");
+  mobileNavBtnEle?.addEventListener("click", function () {
+    mobileNavEle?.classList.add("mobileNavActive");
+  });
+  mobileNavCloseBtnEle?.addEventListener("click", function () {
+    mobileNavEle?.classList.remove("mobileNavActive");
+  });
+  const mobileNavLinkEle = document.getElementsByClassName(
+    "mobileNavLink"
+  );
+  Array.from(mobileNavLinkEle)?.forEach((ele) => {
+    ele.addEventListener("click", function () {
+      mobileNavEle?.classList.remove("mobileNavActive");
+    });
+  });
+</script>

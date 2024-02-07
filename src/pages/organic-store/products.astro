@@ -1,6 +1,9 @@
 ---
+import LineBreaker from "../../components/lineBreaker.astro"
 import { organiCProductsCatalogue1, organiCProductsCatalogue2 } from "../../constants/organicProductsCatalogue"
-import MainLayout from "../../layout/main-layout.astro"
+import BannerLayout from "../../layout/bannerLayout.astro"
+import MainLayout from "../../layout/mainLayout.astro"
+import SectionLayout from "../../layout/sectionLayout.astro"
 ---
 
 <html lang="en">
@@ -13,30 +16,28 @@ import MainLayout from "../../layout/main-layout.astro"
   </head>
   <body>
     <MainLayout>
-      <img src="/organic-store/products.webp" alt="" class="h-[600px]" />
-      <div class="text-sm w-[400px] text-center self-center pt-10">
-        Elevate your lifestyle with our thoughtfully chosen organic products.
-        From nourishing natural foods to soul-soothing body care, eco-conscious
-        clothing to serene yoga essentials, sacred rudrakshas to mindful home
-        decor. Embrace well-being with our Temple & Consecrated items, fortify
-        health with immunity boosters, explore wisdom through books, and indulge
-        in the purity of oils and grains. It's more than a collection U+2013 it's a
-        conscious choice for a harmonious and organic way of living.
-      </div>
-      <div class="text-2xl font-bold text-center py-10">Full Catalogue</div>
-      <div class="gap-[1px] flex flex-col px-16">
-        <div class="bg-[#89C832] h-[1px]"></div>
-        <div class="bg-[#F9C22F] h-[1px]"></div>
-        <div class="bg-[#ED7225] h-[1px]"></div>
-      </div>
-      <div class="py-10 px-[12rem] gap-4 flex flex-col">
+      <BannerLayout imageSrc="/organic-store/products.webp" />
+      <SectionLayout containerClass="flex flex-col gap-6">
+        <div class="text-sm w-[min(400px,100%)] text-center self-center">
+          Elevate your lifestyle with our thoughtfully chosen organic products.
+          From nourishing natural foods to soul-soothing body care, eco-conscious
+          clothing to serene yoga essentials, sacred rudrakshas to mindful home
+          decor. Embrace well-being with our Temple & Consecrated items, fortify
+          health with immunity boosters, explore wisdom through books, and indulge
+          in the purity of oils and grains. It's more than a collection U+2013 it's a
+          conscious choice for a harmonious and organic way of living.
+        </div>
+        <div class="text-2xl font-bold text-center">Full Catalogue</div>
+      </SectionLayout>
+      <LineBreaker />
+      <SectionLayout containerClass="gap-4 flex flex-col">
         <img
           src="/organic-store/products/branding1.webp"
           alt=""
           class="h-[80px] self-center"
         />
-        <div class="flex justify-between gap-[6rem]">
-          <div class="flex flex-col gap-6 self-stretch grow basis-0">
+        <div class="flex justify-center gap-10 flex-wrap">
+          <div class="flex flex-col gap-6 self-stretch w-[min(350px,100%)]">
             <div class="flex flex-col gap-2">
               <div class="text-xl font-semibold">Cereals Rice</div>
               <div class="grid grid-cols-[1fr_auto]">
@@ -80,7 +81,7 @@ import MainLayout from "../../layout/main-layout.astro"
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-6 self-stretch grow basis-0">
+          <div class="flex flex-col gap-6 self-stretch w-[min(350px,100%)]">
             <div class="flex flex-col gap-2">
               <div class="text-xl font-semibold">Pulses</div>
               <div class="grid grid-cols-[1fr_auto]">
@@ -96,7 +97,7 @@ import MainLayout from "../../layout/main-layout.astro"
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-6 self-stretch grow basis-0">
+          <div class="flex flex-col gap-6 self-stretch w-[min(350px,100%)]">
             <div class="flex flex-col gap-2">
               <div class="text-xl font-semibold">Oil</div>
               <div class="grid grid-cols-[1fr_auto]">
@@ -127,20 +128,16 @@ import MainLayout from "../../layout/main-layout.astro"
             </div>
           </div>
         </div>
-      </div>
-      <div class="gap-[1px] flex flex-col px-16">
-        <div class="bg-[#89C832] h-[1px]"></div>
-        <div class="bg-[#F9C22F] h-[1px]"></div>
-        <div class="bg-[#ED7225] h-[1px]"></div>
-      </div>
-      <div class="py-10 px-[12rem] gap-4 flex flex-col">
+      </SectionLayout>
+      <LineBreaker />
+      <SectionLayout containerClass="gap-4 flex flex-col">
         <img
           src="/organic-store/products/branding2.webp"
           alt=""
           class="h-[80px] self-center"
         />
-        <div class="flex justify-between gap-[6rem]">
-          <div class="flex flex-col gap-6 grow basis-0">
+        <div class="flex justify-center gap-10 flex-wrap">
+          <div class="flex flex-col gap-6 self-stretch w-[min(350px,100%)]">
             <div class="flex flex-col gap-2">
               <div class="text-xl font-semibold">Cereal Rice</div>
               <div class="grid grid-cols-[1fr_auto]">
@@ -226,7 +223,7 @@ import MainLayout from "../../layout/main-layout.astro"
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-6 grow basis-0">
+          <div class="flex flex-col gap-6 self-stretch w-[min(350px,100%)]">
             <div class="flex flex-col gap-2">
               <div class="text-xl font-semibold">Pulses</div>
               <div class="grid grid-cols-[1fr_auto]">
@@ -326,7 +323,7 @@ import MainLayout from "../../layout/main-layout.astro"
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-6 grow basis-0">
+          <div class="flex flex-col gap-6 self-stretch w-[min(350px,100%)]">
             <div class="flex flex-col gap-2">
               <div class="text-xl font-semibold">Oil</div>
               <div class="grid grid-cols-[1fr_auto]">
@@ -413,63 +410,59 @@ import MainLayout from "../../layout/main-layout.astro"
             </div>
           </div>
         </div>
-      </div>
-      <div class="gap-[1px] flex flex-col px-16">
-        <div class="bg-[#89C832] h-[1px]"></div>
-        <div class="bg-[#F9C22F] h-[1px]"></div>
-        <div class="bg-[#ED7225] h-[1px]"></div>
-      </div>
-      <div class="py-10 px-[12rem] gap-4 flex flex-col">
+      </SectionLayout>
+      <LineBreaker />
+      <SectionLayout containerClass="gap-4 flex flex-col">
         <img
           src="/organic-store/products/branding1.webp"
           alt=""
           class="h-[80px] self-center"
         />
-        <div class="flex gap-6 justify-between">
-          <div class="flex flex-col gap-6">
-            <div class="flex flex-col gap-2 items-center">
-              <img src="/organic-store/products/rudrakshas.webp" alt="" class="h-[250px] w-[250px] rounded-md">
+        <div class="flex gap-6 justify-center flex-wrap">
+          <div class="flex flex-col gap-6 w-[450px]">
+            <div class="flex flex-col gap-2 items-center h-full">
+              <img src="/organic-store/products/rudrakshas.webp" alt="" class="w-full rounded-md h-full">
               <div class="font-medium text-sm">Rudrakshas</div>
             </div>
-            <div class="flex flex-col gap-2 items-center">
-              <img src="/organic-store/products/templeNConsecrated.webp" alt="" class="h-[250px] w-[250px] rounded-md">
+            <div class="flex flex-col gap-2 items-center h-full">
+              <img src="/organic-store/products/templeNConsecrated.webp" alt="" class="w-full rounded-md h-full">
               <div class="font-medium text-sm">Temple & Consecrated</div>
             </div>
-            <div class="flex flex-col gap-2 items-center">
-              <img src="/organic-store/products/yogaStore.webp" alt="" class="h-[250px] w-[250px] rounded-md">
+            <div class="flex flex-col gap-2 items-center h-full">
+              <img src="/organic-store/products/yogaStore.webp" alt="" class="w-full rounded-md h-full">
               <div class="font-medium text-sm">Yoga Store</div>
             </div>
           </div>
-          <div class="flex flex-col gap-6">
-            <div class="flex flex-col gap-2 items-center">
-              <img src="/organic-store/products/naturalFood.webp" alt="" class="h-[250px] w-[250px] rounded-md">
+          <div class="flex flex-col gap-6 w-[450px]">
+            <div class="flex flex-col gap-2 items-center h-full">
+              <img src="/organic-store/products/naturalFood.webp" alt="" class="w-full rounded-md h-full">
               <div class="font-medium text-sm">Natural Food</div>
             </div>
-            <div class="flex flex-col gap-2 items-center">
-              <img src="/organic-store/products/healthNImmunity.webp" alt="" class="h-[250px] w-[250px] rounded-md">
+            <div class="flex flex-col gap-2 items-center h-full">
+              <img src="/organic-store/products/healthNImmunity.webp" alt="" class="w-full rounded-md h-full">
               <div class="font-medium text-sm">Health & Immunity</div>
             </div>
-            <div class="flex flex-col gap-2 items-center">
-              <img src="/organic-store/products/clothing.webp" alt="" class="h-[250px] w-[250px] rounded-md">
+            <div class="flex flex-col gap-2 items-center h-full">
+              <img src="/organic-store/products/clothing.webp" alt="" class="w-full rounded-md h-full">
               <div class="font-medium text-sm">Clothing</div>
             </div>
           </div>
-          <div class="flex flex-col gap-6">
-            <div class="flex flex-col gap-2 items-center">
-              <img src="/organic-store/products/bodyCare.webp" alt="" class="h-[250px] w-[250px] rounded-md">
+          <div class="flex flex-col gap-6 w-[450px]">
+            <div class="flex flex-col gap-2 items-center h-full">
+              <img src="/organic-store/products/bodyCare.webp" alt="" class="w-full rounded-md h-full">
               <div class="font-medium text-sm">Body Care</div>
             </div>
-            <div class="flex flex-col gap-2 items-center">
-              <img src="/organic-store/products/homeDecor.webp" alt="" class="h-[250px] w-[250px] rounded-md">
+            <div class="flex flex-col gap-2 items-center h-full">
+              <img src="/organic-store/products/homeDecor.webp" alt="" class="w-full rounded-md h-full">
               <div class="font-medium text-sm">Home Decor</div>
             </div>
-            <div class="flex flex-col gap-2 items-center">
-              <img src="/organic-store/products/books.webp" alt="" class="h-[250px] w-[250px] rounded-md">
+            <div class="flex flex-col gap-2 items-center h-full">
+              <img src="/organic-store/products/books.webp" alt="" class="w-full rounded-md h-full">
               <div class="font-medium text-sm">Books</div>
             </div>
           </div>
         </div>
-      </div>
+      </SectionLayout>
     </MainLayout>
   </body>
 </html>

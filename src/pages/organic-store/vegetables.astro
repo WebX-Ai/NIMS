@@ -1,5 +1,7 @@
 ---
-import MainLayout from "../../layout/main-layout.astro"
+import BannerLayout from "../../layout/bannerLayout.astro"
+import MainLayout from "../../layout/mainLayout.astro"
+import SectionLayout from "../../layout/sectionLayout.astro"
 ---
 
 <html lang="en">
@@ -12,11 +14,11 @@ import MainLayout from "../../layout/main-layout.astro"
 	</head>
 	<body>
 		<MainLayout>
-      <img src="/organic-store/vegetables.png" alt="" class="h-[600px]">
-      <div class="text-sm w-[400px] text-center self-center pt-10">
+      <BannerLayout imageSrc="/organic-store/vegetables.webp" />
+      <div class="text-sm w-[min(400px,100%)] text-center self-center">
         Savor the essence of nature in every bite. Our curated selection of organic fruits and vegetables is a symphony of freshness, carefully harvested to bring the purest flavors from farm to table. Cultivated with love, our bounty is a celebration of health, taste, and the vibrant essence of sustainable living.
       </div>
-      <div class="flex flex-col py-10 px-[12rem] gap-8">
+      <SectionLayout containerClass="flex flex-col gap-8">
         <div class="flex flex-col justify-center self-center w-fit">
           <div class="text-2xl font-bold">
             Organic Fruits and Vegetable Catalogue
@@ -25,7 +27,7 @@ import MainLayout from "../../layout/main-layout.astro"
             <span class="text-[#dc2626]">*</span>Contact Sales for a Price Quote
           </div>
         </div>
-        <div class="flex justify-between">
+        <div class="flex justify-center gap-10 flex-wrap">
           <div class="flex flex-col gap-2">
             <div class="text-xl font-semibold">Organic Fruits</div>
             <div>
@@ -88,7 +90,7 @@ import MainLayout from "../../layout/main-layout.astro"
             </div>
           </div>
         </div>
-      </div>
+      </SectionLayout>
     </MainLayout>
   </body>
 </html>

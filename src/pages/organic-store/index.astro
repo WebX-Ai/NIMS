@@ -1,5 +1,7 @@
 ---
-import MainLayout from "../../layout/main-layout.astro"
+import BannerLayout from "../../layout/bannerLayout.astro"
+import MainLayout from "../../layout/mainLayout.astro"
+import SectionLayout from "../../layout/sectionLayout.astro"
 ---
 
 <html lang="en">
@@ -12,13 +14,11 @@ import MainLayout from "../../layout/main-layout.astro"
 	</head>
 	<body>
 		<MainLayout>
-			<div class="h-[570px] truncate">
-				<img src="/organic-store/banner.webp" alt="" class="w-full">
-			</div>
-      <div class="px-[12rem] py-10 flex justify-between">
+			<BannerLayout imageSrc="/organic-store/banner.webp" />
+			<SectionLayout containerClass="flex justify-start self-center gap-x-[8rem] flex-wrap">
 				<div class="flex flex-col">	
 					<div class="font-bold text-[1.5rem]">Products by</div>
-					<div class="flex items-center gap-6">
+					<div class="flex items-center justify-center gap-6 flex-wrap">
 						<img src="/organic-store/productsBy1.webp" alt=""  class="h-[100px]">
 						<img src="/organic-store/productsBy2.webp" alt=""  class="h-[85px]">
 						<img src="/organic-store/productsBy3.webp" alt=""  class="h-[90px]">
@@ -26,41 +26,31 @@ import MainLayout from "../../layout/main-layout.astro"
 				</div>
 				<div class="flex flex-col">	
 					<div class="font-bold text-[1.5rem]">Certified by</div>
-					<div class="flex items-center gap-6 mt-4">
+					<div class="flex items-center justify-center gap-6 mt-4 flex-wrap">
 						<img src="/organic-store/certifiedBy1.webp" alt="" class="h-[60px]">
 						<img src="/organic-store/certifiedBy2.webp" alt="" class="h-[60px]">
 					</div>
 				</div>
-      </div>
-			<div class="grid grid-cols-2 gap-[2px] mx-[12rem] my-10 overflow-hidden grid-rows-[repeat(2,250px)] rounded-md truncate">
-				<div class="row-span-2 h-full w-full truncate">
-					<img src="/organic-store/store1.webp" alt="">
-				</div>
-				<div class="row-span-1 h-full w-full truncate flex items-center">
-					<img src="/organic-store/store2.webp" alt="">
-				</div>
-				<div class="row-span-1 h-full w-full truncate flex items-center">
-					<img src="/organic-store/store3.webp" alt="">
-				</div>
-			</div>
-			<div class="flex gap-[2px] mx-[12rem] my-10">
+			</SectionLayout>
+			<SectionLayout containerClass="grid grid-cols-2 gap-[2px] grid-rows-[repeat(2,250px)] rounded-md truncate gap-[2px] max-[1150px]:grid-cols-1 max-[1150px]:grid-rows-[repeat(4,350px)]">
+				<img src="/organic-store/store1.webp" alt="" class="h-full w-full row-span-2">
+				<img src="/organic-store/store2.webp" alt="" class="h-full w-full row-span-1">
+				<img src="/organic-store/store3.webp" alt="" class="h-full w-full row-span-1">
+			</SectionLayout>
+			<SectionLayout containerClass="flex gap-x-[2px] max-[1200px]:flex-col gap-y-6">
 				<a href="/organic-store/vegetables" class="flex flex-col gap-2 grow basis-0 [&:hover>div:nth-child(1)>img]:scale-110">
-					<div class="truncate h-[300px] rounded-md">
-						<img src="/organic-store/vegetables.webp" alt="" class="transition duration-200">
-					</div>
+					<img src="/organic-store/vegetables.webp" alt="" class="transition duration-200 h-[300px] rounded-md">
 					<div class="text-sm font-medium text-center">Organic Fruits and Vegetables</div>
 				</a>
 				<a href="/organic-store/products" class="flex flex-col gap-2 grow basis-0 [&:hover>div:nth-child(1)>img]:scale-110">
-					<div class="truncate h-[300px] rounded-md flex items-center justify-center">
-						<img src="/organic-store/products.webp" alt="" class="transition duration-200">
-					</div>
+					<img src="/organic-store/products.webp" alt="" class="transition duration-200 h-[300px] rounded-md">
 					<div class="text-sm font-medium text-center">Organic Products</div>
 				</a>
-			</div>
-			<div class="flex flex-col justify-between mx-[12rem] my-10 gap-8 bg-[#F9F9F9] p-8 rounded-md">
+			</SectionLayout>
+			<SectionLayout containerClass="flex flex-col gap-8 bg-[#F9F9F9] p-8 rounded-md self-center">
 				<div class="text-xl text-center font-medium">Find us at</div>
-				<div class="flex gap-6">
-					<div class="flex flex-col gap-6 grow basis-0">
+				<div class="flex gap-6 flex-wrap justify-center">
+					<div class="flex flex-col gap-6 w-[min(700px,100%)]">
 						<div class="flex gap-4">
 							<img src="/organic-store/address.svg" alt="" class="h-[30px]">
 							<div>
@@ -68,7 +58,7 @@ import MainLayout from "../../layout/main-layout.astro"
 							</div>
 						</div>
 						<div class="flex gap-4">
-							<img src="/organic-store/address.svg" alt="" class="h-[30px]">
+							<img src="/organic-store/phone.svg" alt="" class="h-[30px]">
 							<div>+91 89566 91426/7</div>
 						</div>
 						<div class="flex gap-4 items-start">
@@ -78,11 +68,11 @@ import MainLayout from "../../layout/main-layout.astro"
 							</a>
 						</div>
 					</div>
-					<div class="grow basis-0">
+					<div class="w-[min(700px,100%)]">
 						<img src="/organic-store/map.webp" alt="" class="h-full">
 					</div>
-			</div>
-			</div>
+				</div>
+			</SectionLayout>
     </MainLayout>
   </body>
 </html>

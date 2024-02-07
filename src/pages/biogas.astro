@@ -1,5 +1,8 @@
 ---
-import MainLayout from "../layout/main-layout.astro"
+import LineBreaker from "../components/lineBreaker.astro"
+import BannerLayout from "../layout/bannerLayout.astro"
+import MainLayout from "../layout/mainLayout.astro"
+import SectionLayout from "../layout/sectionLayout.astro"
 ---
 
 <html lang="en">
@@ -12,138 +15,132 @@ import MainLayout from "../layout/main-layout.astro"
 	</head>
 	<body>
 		<MainLayout>
-      <div class="h-[570px] truncate">
-				<img src="/biogas/banner.webp" alt="" class="w-full">
-			</div>
-      <img src="/biogas/branding1.webp" alt="" class="py-10 px-[12rem] self-center h-[220px]">
-      <div class="gap-[1px] flex flex-col px-16">
-        <div class="bg-[#89C832] h-[1px]"></div>
-        <div class="bg-[#F9C22F] h-[1px]"></div>
-        <div class="bg-[#ED7225] h-[1px]"></div>
-      </div>
-      <div class="py-10 px-[12rem] flex truncate">
-        <div>
-          <img src="/biogas/resolution.webp" alt="" class="h-full">
+      <BannerLayout imageSrc="/biogas/banner.webp" />
+      <SectionLayout containerClass="flex justify-center">
+        <img src="/biogas/branding1.webp" alt="" class="h-[150px]">
+      </SectionLayout>
+      <LineBreaker />
+      <SectionLayout containerClass="flex truncate flex-wrap justify-center">
+        <div class="w-[min(600px,100%)]">
+          <img src="/biogas/resolution.webp" alt="" class="h-full w-full">
         </div>
-        <div>
-          <img src="/biogas/features.webp" alt="" class="h-full">
+        <div class="w-[min(600px,100%)]">
+          <img src="/biogas/features.webp" alt="" class="h-full w-full">
         </div>
-      </div>
-      <div class="gap-[1px] flex flex-col px-16">
-        <div class="bg-[#89C832] h-[1px]"></div>
-        <div class="bg-[#F9C22F] h-[1px]"></div>
-        <div class="bg-[#ED7225] h-[1px]"></div>
-      </div>
-      <div class="py-10 px-[12rem] flex flex-col truncate gap-8">
-        <div class="font-semibold text-lg text-center">How it works</div>
-        <video src="/biogas/tutorialVideo.webm" controls></video>
-        <div class="h-[300px] self-center">
-          <img src="/biogas/biogasFeatures.webp" alt="" class="h-full">
-        </div>
-      </div>
-      <div class="py-10 px-[12rem] flex flex-col truncate gap-8">
-        <div class="text-xl font-bold text-center">Available Products</div>
-        <div class="bg-slate-500 flex gap-[1px]">
-          <div class="grow basis-0 bg-white mt-[1px] items-center flex flex-col px-2 py-4">
-            <div class="flex flex-col gap-[2px] items-center">
-              <div class="text-lg font-semibold">HomeBiogas 2.0</div>
-              <div class="text-sm">For Families, Restaurants, etc.</div>
-            </div>
-            <img src="/biogas/biogas2.0.webp" alt="" class="h-[300px]">
-            <div class="flex gap-4 justify-between">
-              <div class="flex flex-col gap-2">
-                <div class="gap-1 flex flex-col">
-                  <div class="font-medium">Input</div>
-                  <div class="text-sm">
-                    <li>Daily Max. 6 liters of kitchen waste</li>
-                    <div>OR</div>
-                    <li>20 liters of animal or human waste</li>
-                  </div>
-                </div>
-                <div class="gap-1 flex flex-col">
-                  <div class="font-medium">Volume and Dimensions</div>
-                  <div class="text-sm">
-                    <li>System volume: 2.1m3</li>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <div class="gap-1 flex flex-col">
-                  <div class="font-medium">Output</div>
-                  <div class="text-sm">
-                    <li>Daily 2 hours gas</li>
-                    <li>Nominal 10 millibar gas pressure</li>
-                    <li>Upto max. 40L Fertilizer produced</li>
-                  </div>
-                </div>
-                <div class="gap-1 flex flex-col">
-                  <div class="font-medium">System Dimensions</div>
-                  <div class="text-sm">
-                    <li>2.1Lx 1.15Wx 1.251-1 meters</li>
-                    <div>OR</div>
-                    <li>6.8L x 3.7W x 4.1 H feets</li>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="bg-[#450F0A] text-white py-3 px-6 text-sm font-medium rounded my-8">
-              <a href="/biogas/biogasBrochure.pdf" download="/biogas/biogasBrochure.pdf">
-                Download Specifications
-              </a>
-            </button>
-            <img src="/biogas/biogas2.0install.webp" alt="" class="h-[300px]">
-          </div>
-          <div class="grow basis-0 bg-white mt-[1px] items-center flex flex-col px-2 py-4">
-            <div class="flex flex-col gap-[2px] items-center">
-              <div class="text-lg font-semibold">HomeBiogas 7.0</div>
-              <div class="text-sm">For Hotels, School Kitchens, Farmers, Caterers, Apartments, Hostels, etc.</div>
-            </div>
-            <img src="/biogas/biogas2.0.webp" alt="" class="h-[300px]">
-            <div class="flex gap-4 justify-between">
-              <div class="flex flex-col gap-2">
-                <div class="gap-1 flex flex-col">
-                  <div class="font-medium">Input</div>
-                  <div class="text-sm">
-                    <li>Daily Max. 20 liters of kitchen waste</li>
-                    <div>OR</div>
-                    <li>70 liters of animal or human waste</li>
-                  </div>
-                </div>
-                <div class="gap-1 flex flex-col">
-                  <div class="font-medium">Volume and Dimensions</div>
-                  <div class="text-sm">
-                    <li>System volume: 7m3</li>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <div class="gap-1 flex flex-col">
-                  <div class="font-medium">Output</div>
-                  <div class="text-sm">
-                    <li>Daily 4-5 hours gas</li>
-                    <li>Nominal 10 millibar gas pressure</li>
-                    <li>Upto max. 1200L Fertilizer produced</li>
-                  </div>
-                </div>
-                <div class="gap-1 flex flex-col">
-                  <div class="font-medium">System Dimensions</div>
-                  <div class="text-sm">
-                    <li>4.0L x 1.5W x 1.3H meters</li>
-                    <div>OR</div>
-                    <li>13.1 L x 4.9W x 4.25H feets</li>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="bg-[#450F0A] text-white py-3 px-6 text-sm font-medium rounded my-8">
-              <a href="/biogas/biogasBrochure.pdf" download="/biogas/biogasBrochure.pdf">
-                Download Specifications
-              </a>
-            </button>
-            <img src="/biogas/biogas2.0install.webp" alt="" class="h-[300px]">
+      </SectionLayout>
+      <LineBreaker />
+      <SectionLayout containerClass="gap-8 flex flex-col">
+        <div class="flex flex-col truncate gap-8">
+          <div class="font-semibold text-lg text-center">How it works</div>
+          <video src="/biogas/tutorialVideo.webm" controls></video>
+          <div class="h-[300px] self-center">
+            <img src="/biogas/biogasFeatures.webp" alt="" class="h-full">
           </div>
         </div>
-      </div>
+        <div class="flex flex-col truncate gap-4">
+          <div class="text-xl font-bold text-center">Available Products</div>
+          <div class="flex gap-[1px] flex-wrap p-[1px] max-[600px]:p-0 justify-center">
+            <div class="bg-white items-center flex flex-col px-6 py-10 max-[600px]:px-0 w-[min(800px,100%)] border border-slate-500 max-[600px]:border-x-0 max-[600px]:border-t-0">
+              <div class="flex flex-col gap-[2px] items-center">
+                <div class="text-lg font-semibold">HomeBiogas 2.0</div>
+                <div class="text-sm text-wrap text-center">For Families, Restaurants, etc.</div>
+              </div>
+              <img src="/biogas/biogas2.0.webp" alt="" class="w-[min(400px,100%)]">
+              <div class="flex gap-6 justify-center flex-wrap">
+                <div class="flex flex-col gap-2">
+                  <div class="gap-1 flex flex-col">
+                    <div class="font-medium text-wrap">Input</div>
+                    <div class="text-sm">
+                      <li class="text-wrap">Daily Max. 6 liters of kitchen waste</li>
+                      <div>OR</div>
+                      <li class="text-wrap">20 liters of animal or human waste</li>
+                    </div>
+                  </div>
+                  <div class="gap-1 flex flex-col">
+                    <div class="font-medium text-wrap">Volume and Dimensions</div>
+                    <div class="text-sm">
+                      <li class="text-wrap">System volume: 2.1m3</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="gap-1 flex flex-col">
+                    <div class="font-medium text-wrap">Output</div>
+                    <div class="text-sm">
+                      <li class="text-wrap">Daily 2 hours gas</li>
+                      <li class="text-wrap">Nominal 10 millibar gas pressure</li>
+                      <li class="text-wrap">Upto max. 40L Fertilizer produced</li>
+                    </div>
+                  </div>
+                  <div class="gap-1 flex flex-col">
+                    <div class="font-medium text-wrap">System Dimensions</div>
+                    <div class="text-sm">
+                      <li class="text-wrap">2.1Lx 1.15Wx 1.251-1 meters</li>
+                      <div>OR</div>
+                      <li class="text-wrap">6.8L x 3.7W x 4.1 H feets</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="bg-[#450F0A] text-white py-3 px-6 text-sm font-medium rounded my-8">
+                <a href="/biogas/biogasBrochure.pdf" download="/biogas/biogasBrochure.pdf" class="text-wrap">
+                  Download Specifications
+                </a>
+              </button>
+              <img src="/biogas/biogas2.0install.webp" alt="" class="w-[min(400px,100%)]">
+            </div>
+            <div class="bg-white items-center flex flex-col px-6 py-10 max-[600px]:px-0 w-[min(800px,100%)] border border-slate-500 max-[600px]:border-x-0 max-[600px]:border-b-0">
+              <div class="flex flex-col gap-[2px] items-center">
+                <div class="text-lg font-semibold">HomeBiogas 7.0</div>
+                <div class="text-sm text-wrap text-center">For Hotels, School Kitchens, Farmers, Caterers, Apartments, Hostels, etc.</div>
+              </div>
+              <img src="/biogas/biogas7.0.webp" alt="" class="w-[min(400px,100%)]">
+              <div class="flex gap-6 flex-wrap justify-center">
+                <div class="flex flex-col gap-2">
+                  <div class="gap-1 flex flex-col">
+                    <div class="font-medium text-wrap">Input</div>
+                    <div class="text-sm">
+                      <li class="text-wrap">Daily Max. 20 liters of kitchen waste</li>
+                      <div>OR</div>
+                      <li class="text-wrap">70 liters of animal or human waste</li>
+                    </div>
+                  </div>
+                  <div class="gap-1 flex flex-col">
+                    <div class="font-medium text-wrap">Volume and Dimensions</div>
+                    <div class="text-sm">
+                      <li class="text-wrap">System volume: 7m3</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="gap-1 flex flex-col">
+                    <div class="font-medium text-wrap">Output</div>
+                    <div class="text-sm">
+                      <li class="text-wrap">Daily 4-5 hours gas</li>
+                      <li class="text-wrap">Nominal 10 millibar gas pressure</li>
+                      <li class="text-wrap">Upto max. 1200L Fertilizer produced</li>
+                    </div>
+                  </div>
+                  <div class="gap-1 flex flex-col">
+                    <div class="font-medium text-wrap">System Dimensions</div>
+                    <div class="text-sm">
+                      <li class="text-wrap">4.0L x 1.5W x 1.3H meters</li>
+                      <div>OR</div>
+                      <li class="text-wrap">13.1 L x 4.9W x 4.25H feets</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="bg-[#450F0A] text-white py-3 px-6 text-sm font-medium rounded my-8">
+                <a href="/biogas/biogasBrochure.pdf" download="/biogas/biogasBrochure.pdf" class="text-wrap">
+                  Download Specifications
+                </a>
+              </button>
+              <img src="/biogas/biogas7.0install.webp" alt="" class="w-[min(400px,100%)]">
+            </div>
+          </div>
+        </div>
+      </SectionLayout>
     </MainLayout>
   </body>
 </html>

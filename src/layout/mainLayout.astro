@@ -1,11 +1,11 @@
 ---
 import Header from "../components/header.astro"
-import ContactForm from "../components/contactForm.html"
+import ContactForm from "../components/contactForm.astro"
 import Footer from "../components/footer.astro"
 ---
 
-<body class="flex flex-col">
-  <div class="bg-gradient-to-r from-[#450F0A] to-[#ED7225] text-white text-xs py-1 text-center font-medium">
+<body class="flex flex-col gap-8">
+  <div class="bg-gradient-to-r from-[#450F0A] to-[#ED7225] text-white text-xs py-1 text-center font-medium max-[700px]:hidden">
     Hello. This is a new website design for NIMS-The Organic Hub. Check back again later for more updates.
   </div>
   <Header />
@@ -13,4 +13,3 @@ import Footer from "../components/footer.astro"
   <ContactForm />
   <Footer />
 </body>
-

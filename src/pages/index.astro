@@ -1,5 +1,8 @@
 ---
-import MainLayout from "../layout/main-layout.astro"
+import MainLayout from "../layout/mainLayout.astro"
+import LineBreaker from "../components/lineBreaker.astro"
+import SectionLayout from "../layout/sectionLayout.astro"
+import BannerLayout from "../layout/bannerLayout.astro"
 ---
 
 <html lang="en">
@@ -13,94 +16,78 @@ import MainLayout from "../layout/main-layout.astro"
 	<body>
 		<MainLayout>
 			<div class="relative">
-				<img src="/home/banner.webp" alt="" class="w-full">
-				<div class="absolute left-1/2 transform -translate-x-1/2 top-40 text-white text-4xl font-bold text-center drop-shadow-[0px_0px_4px_rgba(0,0,0,0.8)]">
+				<BannerLayout imageSrc="/home/banner.webp" />
+				<div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 text-white text-4xl font-bold text-center drop-shadow-[0px_0px_4px_rgba(0,0,0,0.8)] max-[700px]:text-xl">
 					Say Hello to 
 					The New India Multipurpose
 					Cooperative Society!
 				</div>
 			</div>
-			<div class="flex flex-col px-[8rem] pt-4 gap-8 pb-8">
+			<SectionLayout containerClass="flex flex-col gap-8">
 				<div class="font-bold text-2xl text-center">Our Goals</div>	
-				<div class="flex justify-between">
-					<div class="flex flex-col gap-2 items-center grow basis-0">
-						<img src="/home/goals1.webp" alt="" class="h-[197px] w-[300px]">
+				<div class="flex justify-center gap-10 flex-wrap">
+					<div class="flex flex-col gap-2 items-center w-[min(300px,100%)]">
+						<img src="/home/goals1.webp" alt="" class="h-[197px]">
 						<div class="font-semibold text-base">Local Economic Development</div>
 						<div class="text-sm w-[70%] text-center">
 							We focus on supporting local economies by providing jobs, goods, and services within the community contributing to the overall economic development and resilience of the area.
 						</div>
 					</div>
-					<div class="flex flex-col gap-2 items-center grow basis-0">
-						<img src="/home/goals2.webp" alt="" class="h-[197px] w-[300px]">
+					<div class="flex flex-col gap-2 items-center w-[min(300px,100%)]">
+						<img src="/home/goals2.webp" alt="" class="h-[197px]">
 						<div class="font-semibold text-base">Social Responsibility</div>
 						<div class="text-sm w-[70%] text-center">
 							One of our primary goals is to meet the needs of their members and communities, promoting sustainability and ethical business practices.
 						</div>
 					</div>
-					<div class="flex flex-col gap-2 items-center grow basis-0">
-						<img src="/home/goals3.webp" alt="" class="h-[197px] w-[300px]">
+					<div class="flex flex-col gap-2 items-center w-[min(300px,100%)]">
+						<img src="/home/goals3.webp" alt="" class="h-[197px]">
 						<div class="font-semibold text-base">Mutual Support and Solidarity</div>
-						<div class="text-sm text-center">
+						<div class="text-sm w-[70%] text-center">
 							Our members work together for mutual benefit fostering a sense of community and solidarity, where they support each other economically and socially.
 						</div>
 					</div>
 				</div>
-			</div>	
-			<div class="gap-[1px] flex flex-col px-16">
-				<div class="bg-[#89C832] h-[1px]"></div>
-				<div class="bg-[#F9C22F] h-[1px]"></div>
-				<div class="bg-[#ED7225] h-[1px]"></div>
-			</div>
-			<div class="flex px-[12rem] py-10 justify-between gap-16">
+			</SectionLayout>	
+			<LineBreaker />
+			<SectionLayout containerClass="flex justify-between gap-8 max-[900px]:flex-wrap max-[900px]:justify-center">
 				<div class="flex flex-col gap-2">
 					<div class="font-bold text-2xl">Founder&apos;s Vision</div>
-					<div class="text-sm">
+					<span class="text-sm">
 						At the inception of The New India Multipurpose Co-operative Society - NIMS, our founder envisioned a transformative journey towards a sustainable and healthier future for India. Embracing the principles of cooperation and multipurpose engagement, NIMS was established with the vision to create a dynamic and inclusive platform that serves as a catalyst for the organic movement in the country. Our founder's dream is to foster a community where the cultivation and consumption of organic products become synonymous with a vibrant, eco-conscious lifestyle. NIMS aims to be the epicenter of this positive change, promoting not only organic farming but also providing a multifaceted cooperative society that empowers individuals, uplifts communities, and contributes to the holistic development of our nation. Through innovation, collaboration, and a commitment to ethical practices, NIMS aspires to be the driving force behind a New India that thrives on health, sustainability, and shared prosperity.
-					</div>
+					</span>
 				</div>	
-				<img src="/home/founderVision.webp" alt="" class="h-[380px]">
-			</div>
-			<div class="gap-[1px] flex flex-col px-16">
-				<div class="bg-[#89C832] h-[1px]"></div>
-				<div class="bg-[#F9C22F] h-[1px]"></div>
-				<div class="bg-[#ED7225] h-[1px]"></div>
-			</div>	
-			<div class="flex flex-col px-[12rem] py-10 gap-6">
-				<div class="font-bold text-[1.5rem] text-center">Products and Services</div>	
-				<div class="text-sm text-center px-[8rem]">
+				<img src="/home/founderVision.webp" alt="">
+			</SectionLayout>
+			<LineBreaker />	
+			<SectionLayout containerClass="flex flex-col items-center">
+				<div class="font-bold text-[1.5rem]">Products and Services</div>	
+				<div class="text-sm max-w-[700px]">
 					Harvesting sustainability, our cooperative thrives on cultivating organic goodness. From farm-fresh fruits to eco-friendly biogas systems, we're rooted in a community that grows together. Nourishing both body and planet, we empower members with financial services, fostering a sustainable future where every seed planted yields abundance for all.
 				</div>
-				<div class="flex gap-2">
-					<div class="flex flex-col gap-2">
-						<div class="relative">
-							<img src="/home/products1.webp" alt="">
-							<div class="bg-[#F9C22F] p-2 absolute bottom-0 left-0 rounded-md text-white font-semibold">Organic Fruits and Vegetables</div>
-						</div>
-						<div class="relative">
-							<img src="/home/products2.webp" alt="">
-							<div class="bg-[#ED7225] p-2 absolute bottom-0 left-0 rounded-md text-white font-semibold">Organic Products</div>
-						</div>
+				<div class="grid grid-cols-[repeat(2,400px)] gap-2 overflow-hidden mt-6 grid-rows-[repeat(3,200px)] truncate max-[900px]:grid-cols-[min(400px,100%)] justify-center">
+					<div class="relative row-span-1 h-full w-full truncate rounded-md">
+						<img src="/home/products1.webp" alt="">
+						<div class="bg-[#F9C22F] p-2 absolute bottom-0 left-0 rounded-md text-white font-semibold">Organic Fruits and Vegetables</div>
 					</div>
-					<div class="flex flex-col gap-2">
-						<div class="relative">
-							<img src="/home/products3.webp" alt="">
-							<div class="bg-[#89C832] p-2 absolute bottom-0 left-0 rounded-md text-white font-semibold">Home Biogas Systems</div>
-						</div>
-						<div class="relative">
-							<img src="/home/products4.webp" alt="">
-							<div class="bg-[#450F0A] p-2 absolute bottom-0 left-0 rounded-md text-white font-semibold">Mushrooms</div>
-						</div>
+					<div class="relative row-span-2 h-full w-full truncate rounded-md">
+						<img src="/home/products2.webp" alt="" class="h-full">
+						<div class="bg-[#ED7225] p-2 absolute bottom-0 left-0 rounded-md text-white font-semibold">Organic Products</div>
+					</div>
+					<div class="relative row-span-2 h-full w-full truncate rounded-md">
+						<img src="/home/products3.webp" alt="" class="h-full">
+						<div class="bg-[#89C832] p-2 absolute bottom-0 left-0 rounded-md text-white font-semibold">Home Biogas Systems</div>
+					</div>
+					<div class="relative row-span-1 h-full w-full truncate rounded-md">
+						<img src="/home/products4.webp" alt="">
+						<div class="bg-[#450F0A] p-2 absolute bottom-0 left-0 rounded-md text-white font-semibold">Mushrooms</div>
 					</div>
 				</div>
-			</div>
-			<div class="gap-[1px] flex flex-col px-16">
-				<div class="bg-[#89C832] h-[1px]"></div>
-				<div class="bg-[#F9C22F] h-[1px]"></div>
-				<div class="bg-[#ED7225] h-[1px]"></div>
-			</div>	
-			<div class="flex flex-col px-[12rem] py-10 gap-8">
+			</SectionLayout>
+			<LineBreaker />	
+			<SectionLayout containerClass="flex flex-col gap-8">
 				<div class="font-bold text-[1.5rem] text-center">News/Awards</div>	
-				<div class="flex justify-between">
+				<div class="flex justify-center gap-6 flex-wrap">
 					<div class="p-2 drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] rounded w-[250px] bg-white">
 						<img src="/home/article1.webp" alt="" >
 						<div class="font-semibold text-sm text-center">NIMS Featured in Latest NavHind Times newspaper yet again</div>
@@ -114,7 +101,7 @@ import MainLayout from "../layout/main-layout.astro"
 						<div class="font-semibold text-sm text-center">NIMS Featured in Latest NavHind Times newspaper yet again</div>
 					</div>
 				</div>
-			</div>
+			</SectionLayout>
 		</MainLayout>
 	</body>
 </html>
