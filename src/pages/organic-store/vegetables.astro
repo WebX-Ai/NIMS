@@ -1,22 +1,26 @@
 ---
-import BannerLayout from "../../layout/bannerLayout.astro"
-import MainLayout from "../../layout/mainLayout.astro"
-import SectionLayout from "../../layout/sectionLayout.astro"
+import BannerLayout from "../../layout/bannerLayout.astro";
+import MainLayout from "../../layout/mainLayout.astro";
+import SectionLayout from "../../layout/sectionLayout.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Organic Fruits and Vegetable</title>
-	</head>
-	<body>
-		<MainLayout>
-      <BannerLayout imageSrc="/organic-store/vegetables.webp" />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Organic Fruits and Vegetable</title>
+  </head>
+  <body>
+    <MainLayout>
+      <BannerLayout imageSrc="/organic-store/vegetables/banner.jpg" />
       <div class="text-sm w-[min(400px,100%)] text-center self-center">
-        Savor the essence of nature in every bite. Our curated selection of organic fruits and vegetables is a symphony of freshness, carefully harvested to bring the purest flavors from farm to table. Cultivated with love, our bounty is a celebration of health, taste, and the vibrant essence of sustainable living.
+        Savor the essence of nature in every bite. Our curated selection of
+        organic fruits and vegetables is a symphony of freshness, carefully
+        harvested to bring the purest flavors from farm to table. Cultivated
+        with love, our bounty is a celebration of health, taste, and the vibrant
+        essence of sustainable living.
       </div>
       <SectionLayout containerClass="flex flex-col gap-8">
         <div class="flex flex-col justify-center self-center w-fit">
@@ -28,9 +32,9 @@ import SectionLayout from "../../layout/sectionLayout.astro"
           </div>
         </div>
         <div class="flex justify-center gap-10 flex-wrap">
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2 items-center">
             <div class="text-xl font-semibold">Organic Fruits</div>
-            <div>
+            <div class="flex flex-col items-center">
               <div>Kiwi pc</div>
               <div>Pomegranate</div>
               <div>Papaya</div>
@@ -52,9 +56,9 @@ import SectionLayout from "../../layout/sectionLayout.astro"
             </div>
           </div>
           <div class="flex flex-col gap-6">
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 items-center">
               <div class="text-xl font-semibold">Currently In-Season</div>
-              <div>
+              <div class="flex flex-col items-center">
                 <div>Sweet lime</div>
                 <div>Chickoo</div>
                 <div>Orange Nagpur</div>
@@ -68,9 +72,9 @@ import SectionLayout from "../../layout/sectionLayout.astro"
                 <div>Apple Ber</div>
               </div>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 items-center">
               <div class="text-xl font-semibold">Particulars</div>
-              <div>
+              <div class="flex flex-col items-center">
                 <div>Black Raspberries 250gms</div>
                 <div>Wood Apple (bael)</div>
                 <div>Portbello Mushroom 250gms</div>
@@ -78,9 +82,9 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2 items-center">
             <div class="text-xl font-semibold">Berries</div>
-            <div>
+            <div class="flex flex-col items-center">
               <div>Strawberry - 400gms Box</div>
               <div>Black Raspberries - 250gms Box</div>
               <div>Gooseberry - 250gms Box</div>

@@ -1,22 +1,27 @@
 ---
-import SectionLayout from "../layout/sectionLayout.astro"
-import LineBreaker from "./lineBreaker.astro"
+import SectionLayout from "../layout/sectionLayout.astro";
+import LineBreaker from "./lineBreaker.astro";
 ---
 
 <LineBreaker />
 <SectionLayout>
   <div class="flex justify-center">
-    <div class=" w-[600px] self-center flex flex-col items-center gap-4 box-content" id="contactFormContainer">
+    <div
+      class="w-[600px] self-center flex flex-col items-center gap-4 box-content"
+      id="contactFormContainer"
+    >
       <div class="font-bold text-2xl">Contact Us to Make a Purchase</div>
       <div class="text-sm">
-        Have questions or ready to make a purchase? We're here for you. Reach out
-        and let's connect. Your desired items are just a message away. Contact us
-        and experience convenience at your fingertips.
+        Have questions or ready to make a purchase? We're here for you. Reach
+        out and let's connect. Your desired items are just a message away.
+        Contact us and experience convenience at your fingertips.
       </div>
       <form class="flex flex-col gap-4 self-stretch" id="contactForm">
         <div class="flex justify-between gap-4 flex-wrap">
           <div class="flex flex-col gap-1 grow basis-0">
-            <label for="firstName" class="text-sm font-semibold">First Name</label>
+            <label for="firstName" class="text-sm font-semibold"
+              >First Name</label
+            >
             <input
               type="text"
               id="firstName"
@@ -25,7 +30,8 @@ import LineBreaker from "./lineBreaker.astro"
             />
           </div>
           <div class="flex flex-col gap-1 grow basis-0">
-            <label for="lastName" class="text-sm font-semibold">Last Name</label>
+            <label for="lastName" class="text-sm font-semibold">Last Name</label
+            >
             <input
               type="text"
               id="lastName"
@@ -47,7 +53,9 @@ import LineBreaker from "./lineBreaker.astro"
             />
           </div>
           <div class="flex flex-col gap-1 grow basis-0">
-            <label for="email" class="text-sm font-semibold">Email Address</label>
+            <label for="email" class="text-sm font-semibold"
+              >Email Address</label
+            >
             <input
               type="email"
               id="email"
@@ -63,8 +71,7 @@ import LineBreaker from "./lineBreaker.astro"
               id="message"
               name="message"
               class="bg-[#D9D9D9] outline-none border-none py-2 px-3 rounded text-sm resize-none"
-              rows="12"
-            ></textarea>
+              rows="12"></textarea>
           </div>
         </div>
         <button
@@ -76,37 +83,63 @@ import LineBreaker from "./lineBreaker.astro"
     </div>
   </div>
 </SectionLayout>
+
 <script>
+  import emailJs from "@emailjs/browser";
+
   const contactFormEle = document.getElementById("contactForm");
-  contactFormEle?.addEventListener("submit", (e) => {
+  contactFormEle?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const formObj: {
-      firstName:string;
-      lastName:string;
-      email:string;
-      contactNumber:string;
-      message:string;
+      firstName: string;
+      lastName: string;
+      email: string;
+      contactNumber: string;
+      message: string;
     } = {
-      firstName:"",
-      lastName:"",
-      email:"",
-      contactNumber:"",
-      message:""
+      firstName: "",
+      lastName: "",
+      email: "",
+      contactNumber: "",
+      message: "",
     };
     const eventTarget = contactFormEle as HTMLFormElement;
     var formData = new FormData(eventTarget);
     formData.forEach(function (value, key) {
       formObj[key as keyof typeof formObj] = value.toString();
     });
-    const whatsappMessage = `Name: ${formObj.firstName + formObj.lastName}
-      Email: ${formObj.email}
-      Contact Number: ${formObj.contactNumber}
-      Message: ${formObj.message}`.replace(/^[ \t]+/gm, "");
-    const whatsappURL =
-      "https://wa.me/" +
-      "+918956691426" +
-      "?text=" +
-      encodeURIComponent(whatsappMessage);
-    window.open(whatsappURL, "_blank");
+    const isMobile =
+      /iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile|WPDesktop/i.test(
+        navigator.userAgent
+      );
+    if (isMobile) {
+      const whatsappMessage = `Name: ${formObj.firstName + formObj.lastName}
+            Email: ${formObj.email}
+            Contact Number: ${formObj.contactNumber}
+            Message: ${formObj.message}`.replace(/^[ \t]+/gm, "");
+      const whatsappURL =
+        "https://wa.me/" +
+        `${import.meta.env.PUBLIC_WHATSAPP_CONTACT_NUMBER}` +
+        "?text=" +
+        encodeURIComponent(whatsappMessage);
+      window.open(whatsappURL, "_blank");
+    } else {
+      try {
+        (function () {
+          emailJs.init({
+            publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY,
+          });
+        })();
+        await emailJs.send(
+          import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+          import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+          formObj
+        );
+        console.log("Email Sent Successful");
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    eventTarget.reset();
   });
 </script>

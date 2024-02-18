@@ -1,9 +1,12 @@
 ---
-import LineBreaker from "../../components/lineBreaker.astro"
-import { organiCProductsCatalogue1, organiCProductsCatalogue2 } from "../../constants/organicProductsCatalogue"
-import BannerLayout from "../../layout/bannerLayout.astro"
-import MainLayout from "../../layout/mainLayout.astro"
-import SectionLayout from "../../layout/sectionLayout.astro"
+import LineBreaker from "../../components/lineBreaker.astro";
+import {
+  organiCProductsCatalogue1,
+  organiCProductsCatalogue2,
+} from "../../constants/organicProductsCatalogue";
+import BannerLayout from "../../layout/bannerLayout.astro";
+import MainLayout from "../../layout/mainLayout.astro";
+import SectionLayout from "../../layout/sectionLayout.astro";
 ---
 
 <html lang="en">
@@ -16,16 +19,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
   </head>
   <body>
     <MainLayout>
-      <BannerLayout imageSrc="/organic-store/products.webp" />
+      <BannerLayout imageSrc="/organic-store/products/banner.jpg" />
       <SectionLayout containerClass="flex flex-col gap-6">
         <div class="text-sm w-[min(400px,100%)] text-center self-center">
           Elevate your lifestyle with our thoughtfully chosen organic products.
-          From nourishing natural foods to soul-soothing body care, eco-conscious
-          clothing to serene yoga essentials, sacred rudrakshas to mindful home
-          decor. Embrace well-being with our Temple & Consecrated items, fortify
-          health with immunity boosters, explore wisdom through books, and indulge
-          in the purity of oils and grains. It's more than a collection U+2013 it's a
-          conscious choice for a harmonious and organic way of living.
+          From nourishing natural foods to soul-soothing body care,
+          eco-conscious clothing to serene yoga essentials, sacred rudrakshas to
+          mindful home decor. Embrace well-being with our Temple & Consecrated
+          items, fortify health with immunity boosters, explore wisdom through
+          books, and indulge in the purity of oils and grains. It's more than a
+          collection U+2013 it's a conscious choice for a harmonious and organic
+          way of living.
         </div>
         <div class="text-2xl font-bold text-center">Full Catalogue</div>
       </SectionLayout>
@@ -42,13 +46,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Cereals Rice</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue1["Cereals Rice"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue1["Cereals Rice"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -56,13 +64,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Ghee</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue1["Ghee"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue1["Ghee"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -70,13 +82,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Spices</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue1["Spices"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue1["Spices"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -86,13 +102,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Pulses</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue1["Pulses"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue1["Pulses"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -102,13 +122,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Oil</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue1["Oil"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue1["Oil"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -116,12 +140,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Sugar Products</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue1["Sugar Products"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue1["Sugar Products"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -142,13 +170,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Cereal Rice</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Cereals Rice"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue2["Cereals Rice"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -156,13 +188,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Cereals</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Cereals"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue2["Cereals"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -170,12 +206,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Roasted Snacks</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Roasted Snacks"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Roasted Snacks"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -184,12 +224,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Nuts and Dry Fruits</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Nuts and Dry Fruits"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Nuts and Dry Fruits"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -198,12 +242,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Healthy Foods</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Healthy Foods"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Healthy Foods"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -212,13 +260,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Millets</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Millets"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue2["Millets"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -228,13 +280,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Pulses</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Pulses"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue2["Pulses"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -242,13 +298,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Pulses Based</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Pulses Based"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue2["Pulses Based"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -256,12 +316,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Indian Beverages</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Indian Beverages"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Indian Beverages"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -270,13 +334,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Savories</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Savories"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue2["Savories"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -284,12 +352,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Processed Products</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Processed Products"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Processed Products"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -298,12 +370,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Processed Products Pasta</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Processed Products Pasta"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Processed Products Pasta"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -312,12 +388,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Processed Products Flakes</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Processed Products Flakes"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Processed Products Flakes"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -328,13 +408,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Oil</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Oil"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue2["Oil"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -342,12 +426,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Sugar Products</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Sugar Products"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Sugar Products"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -356,13 +444,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Ghee</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Ghee"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue2["Ghee"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -370,13 +462,17 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Spices</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Spices"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
-                  ))
+                  Object.entries(organiCProductsCatalogue2["Spices"]).map(
+                    ([key, value]) => (
+                      <>
+                        <div class="flex items-center">
+                          <div>{key}</div>
+                          <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                        </div>
+                        <div>{value}</div>
+                      </>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -384,12 +480,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Processed Products Jam</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Processed Products Jam"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Processed Products Jam"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -398,12 +498,16 @@ import SectionLayout from "../../layout/sectionLayout.astro"
               <div class="text-xl font-semibold">Processed Products Pickle</div>
               <div class="grid grid-cols-[1fr_auto]">
                 {
-                  Object.entries(organiCProductsCatalogue2["Processed Products Pickle"]).map(([key,value]) => (
-                    <div class="flex items-center">
-                      <div>{key}</div>
-                      <div class="border grow border-1 h-0 mx-1 border-dashed border-black"></div>
-                    </div>
-                    <div>{value}</div>
+                  Object.entries(
+                    organiCProductsCatalogue2["Processed Products Pickle"]
+                  ).map(([key, value]) => (
+                    <>
+                      <div class="flex items-center">
+                        <div>{key}</div>
+                        <div class="border grow border-1 h-0 mx-1 border-dashed border-black" />
+                      </div>
+                      <div>{value}</div>
+                    </>
                   ))
                 }
               </div>
@@ -413,51 +517,94 @@ import SectionLayout from "../../layout/sectionLayout.astro"
       </SectionLayout>
       <LineBreaker />
       <SectionLayout containerClass="gap-4 flex flex-col">
-        <img
-          src="/organic-store/products/branding1.webp"
-          alt=""
-          class="h-[80px] self-center"
-        />
+        <div class="flex gap-2 self-center">
+          <img
+            src="/organic-store/products/branding3.webp"
+            alt=""
+            class="h-[80px] self-center"
+          />
+          <img
+            src="/organic-store/products/shivaLogo.svg"
+            alt=""
+            class="h-[70px] self-center"
+          />
+        </div>
         <div class="flex gap-6 justify-center flex-wrap">
-          <div class="flex flex-col gap-6 w-[450px]">
+          <div class="flex flex-col gap-6 max-w-[250px]">
             <div class="flex flex-col gap-2 items-center h-full">
-              <img src="/organic-store/products/rudrakshas.webp" alt="" class="w-full rounded-md h-full">
+              <img
+                src="/organic-store/products/rudrakshas.webp"
+                alt=""
+                class="w-full rounded-md h-full object-cover"
+              />
               <div class="font-medium text-sm">Rudrakshas</div>
             </div>
             <div class="flex flex-col gap-2 items-center h-full">
-              <img src="/organic-store/products/templeNConsecrated.webp" alt="" class="w-full rounded-md h-full">
+              <img
+                src="/organic-store/products/templeNConsecrated.webp"
+                alt=""
+                class="w-full rounded-md h-full object-cover"
+              />
               <div class="font-medium text-sm">Temple & Consecrated</div>
             </div>
             <div class="flex flex-col gap-2 items-center h-full">
-              <img src="/organic-store/products/yogaStore.webp" alt="" class="w-full rounded-md h-full">
+              <img
+                src="/organic-store/products/yogaStore.webp"
+                alt=""
+                class="w-full rounded-md h-full object-cover"
+              />
               <div class="font-medium text-sm">Yoga Store</div>
             </div>
           </div>
-          <div class="flex flex-col gap-6 w-[450px]">
+          <div class="flex flex-col gap-6 max-w-[250px]">
             <div class="flex flex-col gap-2 items-center h-full">
-              <img src="/organic-store/products/naturalFood.webp" alt="" class="w-full rounded-md h-full">
+              <img
+                src="/organic-store/products/naturalFood.webp"
+                alt=""
+                class="w-full rounded-md h-full object-cover"
+              />
               <div class="font-medium text-sm">Natural Food</div>
             </div>
             <div class="flex flex-col gap-2 items-center h-full">
-              <img src="/organic-store/products/healthNImmunity.webp" alt="" class="w-full rounded-md h-full">
+              <img
+                src="/organic-store/products/healthNImmunity.webp"
+                alt=""
+                class="w-full rounded-md h-full object-cover"
+              />
               <div class="font-medium text-sm">Health & Immunity</div>
             </div>
             <div class="flex flex-col gap-2 items-center h-full">
-              <img src="/organic-store/products/clothing.webp" alt="" class="w-full rounded-md h-full">
+              <img
+                src="/organic-store/products/clothing.webp"
+                alt=""
+                class="w-full rounded-md h-full object-cover"
+              />
               <div class="font-medium text-sm">Clothing</div>
             </div>
           </div>
-          <div class="flex flex-col gap-6 w-[450px]">
+          <div class="flex flex-col gap-6 max-w-[250px]">
             <div class="flex flex-col gap-2 items-center h-full">
-              <img src="/organic-store/products/bodyCare.webp" alt="" class="w-full rounded-md h-full">
+              <img
+                src="/organic-store/products/bodyCare.webp"
+                alt=""
+                class="w-full rounded-md h-full object-cover"
+              />
               <div class="font-medium text-sm">Body Care</div>
             </div>
             <div class="flex flex-col gap-2 items-center h-full">
-              <img src="/organic-store/products/homeDecor.webp" alt="" class="w-full rounded-md h-full">
+              <img
+                src="/organic-store/products/homeDecor.webp"
+                alt=""
+                class="w-full rounded-md h-full object-cover"
+              />
               <div class="font-medium text-sm">Home Decor</div>
             </div>
             <div class="flex flex-col gap-2 items-center h-full">
-              <img src="/organic-store/products/books.webp" alt="" class="w-full rounded-md h-full">
+              <img
+                src="/organic-store/products/books.webp"
+                alt=""
+                class="w-full rounded-md h-full object-cover"
+              />
               <div class="font-medium text-sm">Books</div>
             </div>
           </div>

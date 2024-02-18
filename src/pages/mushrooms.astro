@@ -1,41 +1,61 @@
 ---
-import LineBreaker from "../components/lineBreaker.astro"
-import BannerLayout from "../layout/bannerLayout.astro"
-import MainLayout from "../layout/mainLayout.astro"
-import SectionLayout from "../layout/sectionLayout.astro"
+import LineBreaker from "../components/lineBreaker.astro";
+import BannerLayout from "../layout/bannerLayout.astro";
+import MainLayout from "../layout/mainLayout.astro";
+import SectionLayout from "../layout/sectionLayout.astro";
 ---
 
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Mushrooms</title>
-	</head>
-	<body>	
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Mushrooms</title>
+  </head>
+  <body>
     <MainLayout>
-      <BannerLayout imageSrc="/mushrooms/banner.webp" />
+      <BannerLayout imageSrc="/mushrooms/banner.jpg" />
       <SectionLayout containerClass="flex flex-col gap-8">
-        <div class="font-semibold text-xl text-center">CORDYCEPS MILITARIS MUSHROOM</div>
-        <img src="/mushrooms/branding.webp" alt="" class="w-[650px] self-center">
-        <div class="text-sm flex flex-col gap-1 w-[min(500px,100%)] text-center self-center">
+        <div class="font-semibold text-xl text-center">
+          CORDYCEPS MILITARIS MUSHROOM
+        </div>
+        <img
+          src="/mushrooms/branding.webp"
+          alt=""
+          class="w-[650px] self-center"
+        />
+        <div
+          class="text-sm flex flex-col gap-1 w-[min(500px,100%)] text-center self-center"
+        >
           <div>
-            Cordyceps Militaris is a high profile mushroom which is seldom found in Himalayan mountain ranges and has tremendous medicinal value. It has been used in traditional medicine practices for years in these regions.
+            Cordyceps Militaris is a high profile mushroom which is seldom found
+            in Himalayan mountain ranges and has tremendous medicinal value. It
+            has been used in traditional medicine practices for years in these
+            regions.
           </div>
           <div>
-            NIMS The Organic Hub, is the Marketing Partner of this endeavour and is into retail sales of Organic Farming products, while also supporting various Organic Farming Initiatives. Vana Shrubs is itnto Research, Development, Production, Cultivation and Marketing of various mushrooms, with particular focus on "Cordyceps Militaris" mushroom, its by-products, and similarly other mushrooms of significance and their by-products.
+            NIMS The Organic Hub, is the Marketing Partner of this endeavour and
+            is into retail sales of Organic Farming products, while also
+            supporting various Organic Farming Initiatives. Vana Shrubs is itnto
+            Research, Development, Production, Cultivation and Marketing of
+            various mushrooms, with particular focus on "Cordyceps Militaris"
+            mushroom, its by-products, and similarly other mushrooms of
+            significance and their by-products.
           </div>
         </div>
       </SectionLayout>
       <LineBreaker />
       <SectionLayout>
-        <img src="/mushrooms/banner2.webp" alt="" class="">
+        <img src="/mushrooms/banner2.webp" alt="" class="" />
       </SectionLayout>
       <LineBreaker />
-      <SectionLayout>
-        <img src="/mushrooms/benefits.webp" alt="" class="self-center">
+      <SectionLayout containerClass="flex justify-center">
+        <img
+          src="/mushrooms/benefits.webp"
+          alt=""
+          class="self-center w-[min(500px,100%)]"
+        />
       </SectionLayout>
     </MainLayout>
   </body>

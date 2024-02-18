@@ -1,22 +1,28 @@
+---
+import ToolTip from "./toolTip.astro";
+---
+
 <style>
-   .mobileNavActive {
+  .mobileNavActive {
     transform: translateX(0);
   }
 </style>
 
-<div
-  class="flex justify-between px-16 max-[1000px]:px-6 items-center max-[700px]:mt-8"
->
-  <img src="/logo.webp" alt="" class="h-[70px] w-[110px]" />
-  <button class="h-[20px] w-[20px] min-[901px]:hidden" id="mobileNavBtn">
+<div class="flex justify-between px-16 max-[1100px]:px-6 items-center py-4">
+  <a href="/">
+    <img src="/logo.webp" alt="" class="h-[70px]" />
+  </a>
+  <button class="h-[20px] w-[20px] min-[1001px]:hidden" id="mobileNavBtn">
     <img src="/vertIcon.svg" alt="" />
   </button>
-  <nav class="flex gap-6 items-center max-[900px]:hidden text-sm font-medium">
+  <nav class="flex gap-6 items-center max-[1000px]:hidden font-medium">
     <a href="/">Home</a>
     <a href="/biogas">HomeBiogas</a>
     <a href="/organic-store">Organic Store</a>
     <a href="/mushrooms">Mushrooms</a>
-    <a href="/services">Financial Services</a>
+    <ToolTip text="Coming Soon">
+      <div>Financial Services</div>
+    </ToolTip>
     <a href="https://www.saafplatform.com/">Saafplatform</a>
     <button
       class="rounded-[39px] bg-[#ED7225] py-2 px-4 text-white contactUsButton"
@@ -26,17 +32,17 @@
   </nav>
 </div>
 <div
-  class="fixed flex flex-col text-lg gap-4 font-semibold transition-transform bg-white w-[min(350px,100%)] py-10 items-center z-10 h-full right-0 drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] translate-x-full"
+  class="fixed flex flex-col text-lg gap-4 font-semibold transition-transform bg-white w-[min(350px,100%)] py-10 items-center z-10 h-full right-0 drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] translate-x-[105%]"
   id="mobileNav"
 >
   <button class="w-[22px] absolute top-5 right-5" id="mobileNavCloseBtn">
-    <img src="/closeIcon.svg" alt="">
+    <img src="/closeIcon.svg" alt="" />
   </button>
   <a href="/" class="mt-10 mobileNavLink">Home</a>
   <a href="/biogas" class="mobileNavLink">HomeBiogas</a>
   <a href="/organic-store" class="mobileNavLink">Organic Store</a>
   <a href="/mushrooms" class="mobileNavLink">Mushrooms</a>
-  <a href="/services" class="mobileNavLink">Financial Services</a>
+  <div class="mobileNavLink">Financial Services (Coming Soon)</div>
   <a href="https://www.saafplatform.com/" class="mobileNavLink">Saafplatform</a>
   <button
     class="rounded-[39px] bg-[#ED7225] py-2 px-4 text-white mt-auto contactUsButton mobileNavLink"
@@ -66,9 +72,7 @@
   mobileNavCloseBtnEle?.addEventListener("click", function () {
     mobileNavEle?.classList.remove("mobileNavActive");
   });
-  const mobileNavLinkEle = document.getElementsByClassName(
-    "mobileNavLink"
-  );
+  const mobileNavLinkEle = document.getElementsByClassName("mobileNavLink");
   Array.from(mobileNavLinkEle)?.forEach((ele) => {
     ele.addEventListener("click", function () {
       mobileNavEle?.classList.remove("mobileNavActive");

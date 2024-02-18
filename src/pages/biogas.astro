@@ -1,63 +1,80 @@
 ---
-import LineBreaker from "../components/lineBreaker.astro"
-import BannerLayout from "../layout/bannerLayout.astro"
-import MainLayout from "../layout/mainLayout.astro"
-import SectionLayout from "../layout/sectionLayout.astro"
+import LineBreaker from "../components/lineBreaker.astro";
+import BannerLayout from "../layout/bannerLayout.astro";
+import MainLayout from "../layout/mainLayout.astro";
+import SectionLayout from "../layout/sectionLayout.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Organic Store</title>
-	</head>
-	<body>
-		<MainLayout>
-      <BannerLayout imageSrc="/biogas/banner.webp" />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Organic Store</title>
+  </head>
+  <body>
+    <MainLayout>
+      <BannerLayout imageSrc="/biogas/banner.jpg" />
       <SectionLayout containerClass="flex justify-center">
-        <img src="/biogas/branding1.webp" alt="" class="h-[150px]">
+        <img src="/biogas/branding1.webp" alt="" class="h-[150px]" />
       </SectionLayout>
       <LineBreaker />
       <SectionLayout containerClass="flex truncate flex-wrap justify-center">
-        <div class="w-[min(600px,100%)]">
-          <img src="/biogas/resolution.webp" alt="" class="h-full w-full">
+        <div class="w-[min(500px,100%)]">
+          <img src="/biogas/resolution.webp" alt="" class="h-full w-full" />
         </div>
-        <div class="w-[min(600px,100%)]">
-          <img src="/biogas/features.webp" alt="" class="h-full w-full">
+        <div class="w-[min(500px,100%)]">
+          <img src="/biogas/features.webp" alt="" class="h-full w-full" />
         </div>
       </SectionLayout>
       <LineBreaker />
       <SectionLayout containerClass="gap-8 flex flex-col">
         <div class="flex flex-col truncate gap-8">
           <div class="font-semibold text-lg text-center">How it works</div>
-          <video src="/biogas/tutorialVideo.webm" controls></video>
-          <div class="h-[300px] self-center">
-            <img src="/biogas/biogasFeatures.webp" alt="" class="h-full">
+          <video
+            src="/biogas/tutorialVideo.webm"
+            controls
+            class="w-[min(900px,100%)] mx-auto"></video>
+          <div class="w-[min(400px,100%)] self-center">
+            <img src="/biogas/biogasFeatures.webp" alt="" class="h-full" />
           </div>
         </div>
         <div class="flex flex-col truncate gap-4">
           <div class="text-xl font-bold text-center">Available Products</div>
-          <div class="flex gap-[1px] flex-wrap p-[1px] max-[600px]:p-0 justify-center">
-            <div class="bg-white items-center flex flex-col px-6 py-10 max-[600px]:px-0 w-[min(800px,100%)] border border-slate-500 max-[600px]:border-x-0 max-[600px]:border-t-0">
+          <div class="flex flex-wrap p-[1px] max-[600px]:p-0 justify-center">
+            <div
+              class="bg-white items-center flex flex-col px-6 py-10 max-[600px]:px-0 w-[min(600px,100%)] border border-slate-500 max-[600px]:border-x-0 max-[600px]:border-t-0"
+            >
               <div class="flex flex-col gap-[2px] items-center">
                 <div class="text-lg font-semibold">HomeBiogas 2.0</div>
-                <div class="text-sm text-wrap text-center">For Families, Restaurants, etc.</div>
+                <div class="text-sm text-wrap text-center">
+                  For Families, Restaurants, etc.
+                </div>
               </div>
-              <img src="/biogas/biogas2.0.webp" alt="" class="w-[min(400px,100%)]">
+              <img
+                src="/biogas/biogas2.0.webp"
+                alt=""
+                class="w-[min(400px,100%)]"
+              />
               <div class="flex gap-6 justify-center flex-wrap">
                 <div class="flex flex-col gap-2">
                   <div class="gap-1 flex flex-col">
                     <div class="font-medium text-wrap">Input</div>
                     <div class="text-sm">
-                      <li class="text-wrap">Daily Max. 6 liters of kitchen waste</li>
+                      <li class="text-wrap">
+                        Daily Max. 6 liters of kitchen waste
+                      </li>
                       <div>OR</div>
-                      <li class="text-wrap">20 liters of animal or human waste</li>
+                      <li class="text-wrap">
+                        20 liters of animal or human waste
+                      </li>
                     </div>
                   </div>
                   <div class="gap-1 flex flex-col">
-                    <div class="font-medium text-wrap">Volume and Dimensions</div>
+                    <div class="font-medium text-wrap">
+                      Volume and Dimensions
+                    </div>
                     <div class="text-sm">
                       <li class="text-wrap">System volume: 2.1m3</li>
                     </div>
@@ -68,8 +85,12 @@ import SectionLayout from "../layout/sectionLayout.astro"
                     <div class="font-medium text-wrap">Output</div>
                     <div class="text-sm">
                       <li class="text-wrap">Daily 2 hours gas</li>
-                      <li class="text-wrap">Nominal 10 millibar gas pressure</li>
-                      <li class="text-wrap">Upto max. 40L Fertilizer produced</li>
+                      <li class="text-wrap">
+                        Nominal 10 millibar gas pressure
+                      </li>
+                      <li class="text-wrap">
+                        Upto max. 40L Fertilizer produced
+                      </li>
                     </div>
                   </div>
                   <div class="gap-1 flex flex-col">
@@ -82,31 +103,58 @@ import SectionLayout from "../layout/sectionLayout.astro"
                   </div>
                 </div>
               </div>
-              <button class="bg-[#450F0A] text-white py-3 px-6 text-sm font-medium rounded my-8">
-                <a href="/biogas/biogasBrochure.pdf" download="/biogas/biogasBrochure.pdf" class="text-wrap">
+              <button
+                class="bg-[#450F0A] text-white py-3 px-6 text-sm font-medium rounded my-8"
+              >
+                <a
+                  href="/biogas/biogasBrochure.pdf"
+                  download="/biogas/biogasBrochure.pdf"
+                  class="text-wrap"
+                >
                   Download Specifications
                 </a>
               </button>
-              <img src="/biogas/biogas2.0install.webp" alt="" class="w-[min(400px,100%)]">
+              <img
+                src="/biogas/biogas2.0install.webp"
+                alt=""
+                class="w-[min(400px,100%)]"
+              />
             </div>
-            <div class="bg-white items-center flex flex-col px-6 py-10 max-[600px]:px-0 w-[min(800px,100%)] border border-slate-500 max-[600px]:border-x-0 max-[600px]:border-b-0">
+            <div
+              class="bg-white items-center flex flex-col px-6 py-10 max-[600px]:px-0 w-[min(600px,100%)] border border-slate-500 max-[600px]:border-x-0 max-[600px]:border-b-0"
+            >
               <div class="flex flex-col gap-[2px] items-center">
                 <div class="text-lg font-semibold">HomeBiogas 7.0</div>
-                <div class="text-sm text-wrap text-center">For Hotels, School Kitchens, Farmers, Caterers, Apartments, Hostels, etc.</div>
+                <div class="text-sm text-wrap text-center">
+                  For Hotels, School Kitchens, Farmers, Caterers, Apartments,
+                  Hostels, etc.
+                </div>
               </div>
-              <img src="/biogas/biogas7.0.webp" alt="" class="w-[min(400px,100%)]">
-              <div class="flex gap-6 flex-wrap justify-center">
+              <img
+                src="/biogas/biogas7.0.webp"
+                alt=""
+                class="w-[min(400px,100%)]"
+              />
+              <div
+                class="flex gap-6 flex-wrap justify-center pt-[10.3rem] max-[1330px]:pt-0"
+              >
                 <div class="flex flex-col gap-2">
                   <div class="gap-1 flex flex-col">
                     <div class="font-medium text-wrap">Input</div>
                     <div class="text-sm">
-                      <li class="text-wrap">Daily Max. 20 liters of kitchen waste</li>
+                      <li class="text-wrap">
+                        Daily Max. 20 liters of kitchen waste
+                      </li>
                       <div>OR</div>
-                      <li class="text-wrap">70 liters of animal or human waste</li>
+                      <li class="text-wrap">
+                        70 liters of animal or human waste
+                      </li>
                     </div>
                   </div>
                   <div class="gap-1 flex flex-col">
-                    <div class="font-medium text-wrap">Volume and Dimensions</div>
+                    <div class="font-medium text-wrap">
+                      Volume and Dimensions
+                    </div>
                     <div class="text-sm">
                       <li class="text-wrap">System volume: 7m3</li>
                     </div>
@@ -117,8 +165,12 @@ import SectionLayout from "../layout/sectionLayout.astro"
                     <div class="font-medium text-wrap">Output</div>
                     <div class="text-sm">
                       <li class="text-wrap">Daily 4-5 hours gas</li>
-                      <li class="text-wrap">Nominal 10 millibar gas pressure</li>
-                      <li class="text-wrap">Upto max. 1200L Fertilizer produced</li>
+                      <li class="text-wrap">
+                        Nominal 10 millibar gas pressure
+                      </li>
+                      <li class="text-wrap">
+                        Upto max. 1200L Fertilizer produced
+                      </li>
                     </div>
                   </div>
                   <div class="gap-1 flex flex-col">
@@ -131,12 +183,22 @@ import SectionLayout from "../layout/sectionLayout.astro"
                   </div>
                 </div>
               </div>
-              <button class="bg-[#450F0A] text-white py-3 px-6 text-sm font-medium rounded my-8">
-                <a href="/biogas/biogasBrochure.pdf" download="/biogas/biogasBrochure.pdf" class="text-wrap">
+              <button
+                class="bg-[#450F0A] text-white py-3 px-6 text-sm font-medium rounded my-8"
+              >
+                <a
+                  href="/biogas/biogasBrochure.pdf"
+                  download="/biogas/biogasBrochure.pdf"
+                  class="text-wrap"
+                >
                   Download Specifications
                 </a>
               </button>
-              <img src="/biogas/biogas7.0install.webp" alt="" class="w-[min(400px,100%)]">
+              <img
+                src="/biogas/biogas7.0install.webp"
+                alt=""
+                class="w-[min(400px,100%)]"
+              />
             </div>
           </div>
         </div>

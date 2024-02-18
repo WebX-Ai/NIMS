@@ -1,0 +1,25 @@
+---
+const { text } = Astro.props;
+---
+
+<style>
+  .toolTipText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #111827 transparent transparent transparent;
+  }
+</style>
+
+<div class="relative [&:hover>div:nth-child(1)]:visible transition-all tooltip">
+  <div
+    class="absolute bg-gray-900 text-white px-3 rounded text-xs invisible py-1 bottom-[120%] toolTipText w-full text-center"
+  >
+    {text}
+  </div>
+  <slot />
+</div>

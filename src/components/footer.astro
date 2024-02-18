@@ -1,6 +1,16 @@
-<div class="bg-[#450F0A] py-10 px-16 gap-8 flex flex-col text-white max-[1350px]:px-7 max-[750px]:hidden">
+---
+import ToolTip from "./toolTip.astro";
+---
+
+<div
+  class="bg-[#450F0A] py-10 px-16 gap-8 flex flex-col text-white max-[1350px]:px-7 max-[750px]:hidden"
+>
   <div class="flex justify-between gap-10 max-[1350px]:gap-4">
-    <img src="/footer/footerLogo.webp" alt="" class="h-[100px] mr-10 max-[1350px]:hidden">
+    <img
+      src="/footer/footerLogo.webp"
+      alt=""
+      class="h-[100px] mr-10 max-[1350px]:hidden"
+    />
     <div class="flex flex-col gap-4 max-w-[380px]">
       <div class="font-semibold text-xl">Contact Us</div>
       <div class="flex flex-col gap-1 text-sm">
@@ -9,26 +19,29 @@
           <div>+91 89566 91427 - Sales</div>
         </div>
         <div>
-          Saldanha Kieran Apartments - II, Near Mapusa Court Junction, Opposite Sangeeta Mobile, Next to Union Restaurant, Mapusa, Goa 403507
+          Saldanha Kieran Apartments - II, Near Mapusa Court Junction, Opposite
+          Sangeeta Mobile, Next to Union Restaurant, Mapusa, Goa 403507
         </div>
       </div>
-    </div> 
+    </div>
     <div class="flex flex-col gap-4">
       <div class="font-semibold text-xl">Follow us</div>
       <div class="flex flex-col gap-1 text-sm">
-        <div>Instagram</div>
-        <div>Facebook</div>
-        <div>Youtube</div>
+        <a href="https://www.instagram.com/nims.organichub">Instagram</a>
+        <a href="https://www.facebook.com/nims.organichub/">Facebook</a>
+        <a href="">Youtube</a>
       </div>
-    </div> 
+    </div>
     <div class="flex flex-col gap-4">
       <div class="font-semibold text-xl">Our Sectors</div>
       <div class="flex flex-col gap-1 text-sm">
-        <div>HomeBiogas</div>
-        <div>Organic Store</div>
-        <div>Mushrooms</div>
-        <div>FInancial Services</div>
-        <div>Saafplatform</div>
+        <a href="/biogas">HomeBiogas</a>
+        <a href="/organic-store">Organic Store</a>
+        <a href="/mushrooms">Mushrooms</a>
+        <ToolTip text="Coming Soon">
+          <div>Financial Services</div>
+        </ToolTip>
+        <a href="https://www.saafplatform.com/">Saafplatform</a>
       </div>
     </div>
     <div class="flex flex-col gap-4">
